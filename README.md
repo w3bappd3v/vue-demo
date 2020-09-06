@@ -1,5 +1,5 @@
 # vue-demo
 
-This is a work in progress still at ground level less than 10 hours in.
+This is a work in progress still at ground level.
 
-Have routing, testing, and vuex stores working so far.
+Have routing, vuex stores, some getters and mutators, views and components working so far.
