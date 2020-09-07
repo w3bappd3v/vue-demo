@@ -1,7 +1,9 @@
 <script>
   import store from '../store/modules/listings'
-  // import Filterbar from "../Filterbar.svelte";
-  // import Listing from "./Listing.svelte";
+
+  import Listing from "../components/listings/Listing";
+  // import Filterbar from "../components/listings/Filterbar;
+  
 
   export default {
     computed: {
@@ -9,34 +11,36 @@
         return store.getters.listings;
       }
     },
-    methods: {
-      filterList (event) {
-        let strToMatch = event.detail.text.toLowerCase().replace(/\s/g, '');
-        let numCount = 0;
-        for(let i=1; i<strToMatch.length; i++){
-        if(/^\d+$/.test(strToMatch[i])){
-            numCount++;
-        }
-        }
-        if(numCount == strToMatch.length-1){
-        strToMatch = parseInt(strToMatch);
-        }
-        return this.listings.filter(x => x.address.toLowerCase().includes('123'));
-      }
+    components: {
+      appListing: Listing
     }
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .listings {
+    margin: 0 auto;
+    max-width: 773px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
+  }
+  @media only screen and (max-width: 758px) {
+    .app {
+      max-width: 518px;
+    }
+    @media only screen and (max-width: 517px) {
+      .app {
+        max-width: 277px;
+      }
+    }
   }
 </style>
 
 <template>
   <div>
     <h1>Listings</h1>
-    <p v-for="listing in listings" :key="listing.id">{{ listing.address }}</p>
+    <div class="listings">
+      <app-listing v-for="listing in listings" :listing="listing" :key="listing.id"></app-listing>
+    </div>
   </div>
 </template>
