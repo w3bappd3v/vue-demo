@@ -1,5 +1,5 @@
 <script>
-  import store from '../components/listings/store/listings'
+  import store from '../store/modules/listings'
   // import Filterbar from "../Filterbar.svelte";
   // import Listing from "./Listing.svelte";
 
@@ -37,6 +37,6 @@
 <template>
   <div>
     <h1>Listings</h1>
-    <p>{{ listings[3].address }}</p>
+    <p v-for="listing in listings" :key="listing.id">{{ listing.address }}</p>
   </div>
 </template>

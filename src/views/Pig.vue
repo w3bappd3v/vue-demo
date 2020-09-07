@@ -1,5 +1,5 @@
 <script>
-  import store from '../components/pig/store/game'
+  import store from '../store/modules/game'
   
   export default {
     computed: {
