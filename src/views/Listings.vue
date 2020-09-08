@@ -22,22 +22,14 @@
     margin: 0 auto;
     max-width: 773px;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  @media only screen and (max-width: 758px) {
-    .app {
-      max-width: 518px;
-    }
-    @media only screen and (max-width: 517px) {
-      .app {
-        max-width: 277px;
-      }
-    }
-  }
+ 
 </style>
 
 <template>
-  <div>
+  <div class="container">
     <h1>Listings</h1>
     <div class="listings">
       <app-listing v-for="listing in listings" :listing="listing" :key="listing.id"></app-listing>

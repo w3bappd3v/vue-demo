@@ -13,6 +13,7 @@
     }
     .row-item {
       width: 50%;
+      min-width: 226px;
       height: fit-content;
       border: 1px solid #d4d4d4;
       border-radius: 3px;
@@ -54,7 +55,7 @@
       <router-link to="/listings" tag="div" class="row-item pointer">
         <h3>List Demo</h3>
         <p><strong>Currently:</strong> Demonstrates VueJS, Custom UI, getting data from VueX, passing objects as props, Vue Router.</p>
-        <p><strong>Todo:</strong> Filter and sort List.</p>
+        <p><strong>Todo:</strong> Filter and sort list.</p>
       </router-link>
     </div>
     <div class="row">
