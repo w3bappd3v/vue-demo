@@ -1,32 +1,36 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> | 
-      <router-link to="/pig">Pig Game</router-link> | 
-      <router-link to="/listings">List Demo</router-link>
+      <router-link to="/">Home</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+body {
+  background: #efefef;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+  font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #585858;
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #b94242;
+    font-size: 1.5em;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #b94242;
     }
   }
 }

@@ -11,7 +11,7 @@ const state = {
       neighborhood: "Beverly Hills",
       price: "2,000,000",
       summary: "2BD, 2BA, 1200SF, CONDO",
-      imageurl: "/assets/listing-images/listing-1.jpg"
+      image: "listing-1"
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const state = {
       neighborhood: "Harlem",
       price: "100,000",
       summary: "2BD, 2BA, 900SF, SINGLE-FAMILY",
-      imageurl: "/assets/listing-images/listing-2.jpg"
+      image: "listing-2"
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const state = {
       neighborhood: "Withering Heights",
       price: "100,000,000",
       summary: "3BD, 2BA, 1100SF, CO-OP",
-      imageurl: "/assets/listing-images/listing-3.jpg"
+      image: "listing-3"
     },
     {
       id: 4,
@@ -35,7 +35,7 @@ const state = {
       neighborhood: "Mr. Rodgers",
       price: "1,020,300",
       summary: "2BD, 2BA, 1200SF, CONDO",
-      imageurl: "/assets/listing-images/listing-3.jpg"
+      image: "listing-3"
     },
     {
       id: 5,
@@ -43,7 +43,7 @@ const state = {
       neighborhood: "Malibu",
       price: "10,000,000",
       summary: "2BD, 2BA, 900SF, SINGLE-FAMILY",
-      imageurl: "/assets/listing-images/listing-2.jpg"
+      image: "listing-2"
     },
     {
       id: 6,
@@ -51,7 +51,7 @@ const state = {
       neighborhood: "Hollywood",
       price: "9,000,000",
       summary: "3BD, 2BA, 1100SF, CO-OP",
-      imageurl: "/assets/listing-images/listing-1.jpg"
+      image: "listing-1"
     }
   ]
 };

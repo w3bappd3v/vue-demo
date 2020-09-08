@@ -1,13 +1,12 @@
 <template>
     <div class="listing">
-        <!-- <img src={imageurl} alt={address} /> -->
-        <!-- <a href={`/listings/${id}`} class="btn btn-primary listing-link" use:link>
-            View Listing
-        </a> -->
-        <ul class="info">
-            <li class="address">{{ listing.address }}</li>
-            <li>${{ listing.price }}</li>
-        </ul>
+    <img :src="require('../../assets/listing-images/' + listing.image +'.jpg')">
+    <ul class="info">
+        <li class="address">{{ listing.address }}</li>
+        <li>{{ listing.neighborhood }}</li>
+        <li>${{ listing.price }}</li>
+        <li>{{ listing.summary }}</li>
+    </ul>
     </div>
 </template>
 
@@ -27,6 +26,7 @@ export default {
     margin: 20px 10px;
     padding: 10px;
     box-shadow: -2px -1px 12px 5px #b8b8b8bf;
+    background: #f7f7f7;
 
     img {
       width:200px;

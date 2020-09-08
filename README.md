@@ -1,6 +1,6 @@
 # vue-demo
 
-This is a work in progress still at ground level do demonstrate Front End Engineering ability and understanding.
+This is a work in progress still at ground level to demonstrate Front End Engineering ability and understanding.
 
 Have routing, vuex stores, some getters and mutators, views and components in place so far.
 
