@@ -9,7 +9,7 @@
 
 <style lang="scss">
 body {
-  background: #efefef;
+  background: linear-gradient(90deg, rgba(198,197,197,1) 0%, rgba(255,253,253,1) 50%, rgba(209,209,209,1) 100%);
 }
 #app {
   @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');

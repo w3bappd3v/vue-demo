@@ -59,7 +59,7 @@
     </div>
     <div class="row">
       <router-link to="/pig" tag="div" class="row-item pointer">
-        <h3>Pig Game</h3>
+        <h3>Pig Dice Game</h3>
         <p><strong>Currently:</strong> Demonstrates VueJS, getting and mutating data from VueX, event dispatch component communication, Vue Router.</p>
         <p><strong>Todo:</strong> Pretty much everything.</p>
       </router-link>
