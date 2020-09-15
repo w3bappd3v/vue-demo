@@ -43,12 +43,13 @@
   <div class="home">
     <div class="row">
       <div class="row-item">
-        <h2>Welcome to The C0de Z0ne</h2>
+        <h2>Welcome</h2>
         <p>
-          <strong>Disclaimer:</strong>The purpose of this domain it to demonstrate Front End Engineering knowledge and ability. 
+          <strong>Disclaimer:</strong> The purpose of this domain it to demonstrate Front End Engineering knowledge and ability. 
           It is a relatively new perpetual work in progress.
-          While in it's early phases some concepts may have been implemented for demonstrative purpose over actual necessity.
+          Some concepts may have been implemented for demonstrative purpose over actual necessity.
         </p>
+        <p><strong>Source repository:</strong> <a href="https://github.com/w3bappd3v/vue-demo">https://github.com/w3bappd3v/vue-demo</a></p>
       </div>
     </div>
     <div class="row">
@@ -61,14 +62,13 @@
     <div class="row">
       <router-link to="/pig" tag="div" class="row-item pointer">
         <h3>Pig Dice Game</h3>
-        <p><strong>Currently:</strong> Demonstrates VueJS, getting and mutating data from VueX, event dispatch component communication, Vue Router.</p>
+        <p><strong>Currently:</strong> Demonstrates VueJS, getting and mutating data from VueX, event dispatching, Vue Router.</p>
         <p><strong>Todo:</strong> Pretty much everything.</p>
       </router-link>
     </div>
     <div class="row">
       <div class="row-item">
         <h3>More Stuff on CodePen</h3>
-        <p>Managed to play around some in between full time jobs.</p>
         <p><a href="https://codepen.io/w3bappd3v">https://codepen.io/w3bappd3v</a></p>
       </div>
     </div>
