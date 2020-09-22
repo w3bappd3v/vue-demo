@@ -1,24 +1,16 @@
 <script>
   import store from '../store/modules/listings'
-
   import Listing from "../components/listings/Listing";
-  // import Filterbar from "../components/listings/Filterbar";
   
-
   export default {
     computed: {
       listings () {
         return store.getters.listings;
-      }
-    },
-    components: {
-      listing: Listing
-      // filterbar: Filterbar
-    },
-    methods: {
-      updateList (text) {
-        console.log(this.listings);
-        let strToMatch = text.toLowerCase().replace(/\s/g, '');
+      },
+      filteredListings: function () {
+        let strToMatch = this.searchStr.toLowerCase();
+        //if search chars are all number type need to to parseInt() for string includes()
+        //otherwise ok they are coerced if mixed with string chars
         let numCount = 0;
         for(let i=1; i<strToMatch.length; i++){
           if(/^\d+$/.test(strToMatch[i])){
@@ -28,15 +20,34 @@
         if(numCount == strToMatch.length-1){
           strToMatch = parseInt(strToMatch);
         }
-        console.log(strToMatch)
-        this.listings.filter(x => x.address.toLowerCase().includes(strToMatch));
-        console.log(this.listings.filter(x => x.address.toLowerCase().includes(strToMatch)));
+        return this.listings.filter(x => x.address.toLowerCase().includes(strToMatch));
       }
+    },
+    data() {
+      return {
+        searchStr: ''
+      }
+    }, 
+    components: {
+      listing: Listing
     }
   }
 </script>
 
 <style scoped lang="scss">
+  input {
+    border-radius: 3px;
+    border: 1px solid #d4d4d4;
+    height: 25px;
+    width: 200px;
+    font-size: 1.15em;
+    padding: 5px;
+    vertical-align: middle;
+    color: #585858;
+  }
+  input:focus{
+    outline-color: #a4dfb5;
+  }
   .listings {
     margin: 0 auto;
     max-width: 773px;
@@ -44,15 +55,14 @@
     flex-wrap: wrap;
     justify-content: center;
   }
- 
 </style>
 
 <template>
   <div class="container">
     <h1>Listings</h1>
+    <input type="text" v-model="searchStr" placeholder="Enter Address" />
     <div class="listings">
-      <!-- <filterbar v-on:update-list="updateList"></filterbar> -->
-      <listing v-for="listing in listings" :listing="listing" :key="listing.id"></listing>
+      <listing v-for="listing in filteredListings" :listing="listing" :key="listing.id"></listing>
     </div>
   </div>
 </template>
