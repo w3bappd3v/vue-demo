@@ -30,6 +30,19 @@
     }, 
     components: {
       listing: Listing
+    },
+    methods: {
+      addListing (listing) {
+      listing = {
+        id: 7,
+        address: "987 Sunset Blvd",
+        neighborhood: "Hollywood",
+        price: "69,000,000",
+        summary: "3BD, 2BA, 1100SF, CO-OP",
+        image: "listing-1"
+      }
+      store.dispatch('addListing', listing);  
+      }
     }
   }
 </script>
@@ -53,13 +66,17 @@
     max-width: 773px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+  }
+  button {
+    margin-right: 10px;
   }
 </style>
 
 <template>
   <div class="container">
     <h1>Listings</h1>
+    <button @click="addListing({})">ADD ITEM</button>
     <input type="text" v-model="searchStr" placeholder="Enter Address" />
     <div class="listings">
       <listing v-for="listing in filteredListings" :listing="listing" :key="listing.id"></listing>

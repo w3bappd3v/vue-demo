@@ -1,6 +1,5 @@
 <style scoped lang="scss">
   .home {
-    margin: 0 10%;
     .row {
       display: flex;
       justify-content: flex-end;
@@ -13,28 +12,35 @@
     }
     .row-item {
       width: 50%;
-      min-width: 226px;
+      min-width: 250px;
       height: fit-content;
-      border: 1px solid #d4d4d4;
-      border-radius: 3px;
-      margin: 20px 10px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      margin: 15px 10px;
       padding: 10px 20px;
-      box-shadow: -2px -1px 12px 5px #b8b8b8bf;
+      box-shadow: 1px 1px 12px 2px $box-shadow-color;
       text-align: left;
       border-radius: 3px;
       background: #f7f7f7;
+      cursor: pointer;
     }
     h2, h3, p{
       margin: 0 0 5px 0;
     }
     h2 {
-      color: #128ddf;
+      color: $font-color-b;
     }
     h3 {
-      color: #b94242;
+      color: $font-color-a;
     }
-    .pointer {
-      cursor: pointer;
+    h4 {
+      margin: 10px 0;
+    }
+    .row-item:hover {
+      box-shadow: 1px 1px 10px 2px #6381b9;
+    }
+    p {
+      color: #5c5c5c;
     }
   }
 </style>
@@ -44,25 +50,30 @@
     <div class="row">
       <div class="row-item">
         <h2>Welcome</h2>
-        <p>
-          <strong>Disclaimer:</strong> The purpose of this domain it to demonstrate Front End Engineering knowledge and ability. 
-          It is a relatively new perpetual work in progress.
-          Some concepts may have been implemented for demonstrative purpose over actual necessity.
-        </p>
+        <h4>This is my Front End engineering demo domain written in VueJS.</h4>
         <p><strong>Source repository:</strong> <a href="https://github.com/w3bappd3v/vue-demo">https://github.com/w3bappd3v/vue-demo</a></p>
       </div>
     </div>
     <div class="row">
-      <router-link to="/listings" tag="div" class="row-item pointer">
+      <router-link to="/listings" tag="div" class="row-item">
         <h3>List Demo</h3>
-        <p><strong>Currently:</strong> Demonstrates VueJS, Custom UI, getting data from VueX, passing objects as props, Vue Router.</p>
-        <p><strong>Todo:</strong> Filter and sort list.</p>
+        <h4>Renders a filterable list of items to which items can be added.</h4>
+        <p><strong>Demonstrates:</strong> Component Architecture, Custom UI, VueX Getter, Props, Vue Router, List Filtering.</p>
+        <p><strong>Todo:</strong>List sorting.</p>
       </router-link>
     </div>
     <div class="row">
-      <router-link to="/pig" tag="div" class="row-item pointer">
+      <router-link to="/async" tag="div" class="row-item">
+        <h3>Async HTTP</h3>
+        <h4>Fetches and renders data from a public API</h4>
+        <p><strong>Demonstrates:</strong> VueJS, getting and mutating data from VueX, event dispatching, Vue Router.</p>
+        <p><strong>Todo:</strong> Pretty much everything.</p>
+      </router-link>
+    </div>
+    <div class="row">
+      <router-link to="/pig" tag="div" class="row-item">
         <h3>Pig Dice Game</h3>
-        <p><strong>Currently:</strong> Demonstrates VueJS, getting and mutating data from VueX, event dispatching, Vue Router.</p>
+        <p><strong>Demonstrates:</strong> Getting and mutating data from VueX, event dispatching, Vue Router.</p>
         <p><strong>Todo:</strong> Pretty much everything.</p>
       </router-link>
     </div>

@@ -22,10 +22,10 @@ export default {
     width: 200px;
     height: fit-content;
     border: 1px solid #d4d4d4;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 20px 10px;
     padding: 10px;
-    box-shadow: -2px -1px 12px 5px #b8b8b8bf;
+    box-shadow: 1px 1px 12px 3px $box-shadow-color;
     background: #f7f7f7;
 
     img {

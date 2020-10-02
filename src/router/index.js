@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Pig from '../views/Pig.vue'
 import Listings from '../views/Listings.vue'
+import Async from '../views/Async.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/listings',
     name: 'Listings',
     component: Listings
+  },
+  {
+    path: '/async',
+    name: 'Async',
+    component: Async
   }
 ]
 

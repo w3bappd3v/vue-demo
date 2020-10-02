@@ -62,8 +62,23 @@ const getters = {
   }
 };
 
+const mutations = {
+  'ADD_LISTING'(state, listing) {
+    state.listings.push(listing);
+  }
+}
+
+const actions = {
+  addListing ({commit}, listing) {
+    console.log('add');
+    commit('ADD_LISTING', listing);
+  }
+}
+
 
 export default new Vuex.Store({
   state,
-  getters
+  getters,
+  mutations,
+  actions
 })

@@ -17,9 +17,13 @@
 </script>
 
 <style scoped>
- .pig-game {
-     background: orange;
- }
+  .pig-game {
+      border: 1px solid #7c7c7c;
+      border-radius: 5px;
+      background: #acacac;
+      padding: 10px;
+      margin-top: 10px;
+  }
 </style>
 
 <template>
@@ -27,6 +31,6 @@
     <h3>Pig Component</h3>
     <p>{{ game.title }}</p>
     <p>{{ game.roundScore }}</p>
-    <button @click="updateScore(game.roundScore)">Update</button>
+    <button @click="updateScore(game.roundScore)">INCREMEMT</button>
   </div>
 </template>
