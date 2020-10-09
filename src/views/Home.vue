@@ -48,10 +48,10 @@
 <template>
   <div class="home">
     <div class="row">
-      <div class="row-item">
+      <div class="row-item" @click="openTab('https://github.com/w3bappd3v/vue-demo')">
         <h2>Welcome</h2>
         <h4>This is my Front End engineering demo domain written in VueJS.</h4>
-        <p><strong>Source repository:</strong> <a href="https://github.com/w3bappd3v/vue-demo">https://github.com/w3bappd3v/vue-demo</a></p>
+        <p><strong>Source repository:</strong> https://github.com/w3bappd3v/vue-demo</p>
       </div>
     </div>
     <div class="row">
@@ -78,9 +78,9 @@
       </router-link>
     </div>
     <div class="row">
-      <div class="row-item">
+      <div class="row-item" @click="openTab('https://codepen.io/w3bappd3v')">
         <h3>More Stuff on CodePen</h3>
-        <p><a href="https://codepen.io/w3bappd3v">https://codepen.io/w3bappd3v</a></p>
+        <p><a>https://codepen.io/w3bappd3v</a></p>
       </div>
     </div>
   </div>
@@ -88,6 +88,11 @@
 
 <script>
   export default {
-    name: 'Home'
+    name: 'Home',
+    methods: {
+      openTab: function (url) {
+      window.open(url);
+    }
+    }
   }
 </script>

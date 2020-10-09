@@ -48,6 +48,9 @@
 </script>
 
 <style scoped lang="scss">
+  .container {
+    min-width: 390px;
+  }
   input {
     border-radius: 3px;
     border: 1px solid #d4d4d4;
@@ -67,10 +70,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    
   }
   button {
     margin-right: 10px;
   }
+  @media screen and (max-width: 785px) {
+    .listings {
+      max-width: 485px;
+    }
+  }
+    @media screen and (max-width: 543px) {
+    .listings {
+      max-width: 241px;
+    }
+  }
+
+
 </style>
 
 <template>

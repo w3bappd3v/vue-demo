@@ -45,13 +45,14 @@
     border-radius: 6px;
     background: #fff;
     padding: 0 20px;
-    outline-color: #919191;
+    outline-color: #fff;
   }
 
   button:hover {
     background: #829fdd;
     cursor: pointer;
     color: #fff;
+    outline-color: #829fdd;
   }
 
   #nav {
