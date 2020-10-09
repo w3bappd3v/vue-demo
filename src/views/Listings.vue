@@ -48,9 +48,6 @@
 </script>
 
 <style scoped lang="scss">
-  .container {
-    min-width: 390px;
-  }
   input {
     border-radius: 3px;
     border: 1px solid #d4d4d4;
@@ -83,6 +80,9 @@
     @media screen and (max-width: 543px) {
     .listings {
       max-width: 241px;
+    }
+    button {
+      margin-bottom: 10px;
     }
   }
 
