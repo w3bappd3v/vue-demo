@@ -66,8 +66,8 @@
       <router-link to="/async" tag="div" class="row-item">
         <h3>Async HTTP</h3>
         <h4>Fetches and renders data from a public API</h4>
-        <p><strong>Demonstrates:</strong> VueJS, getting and mutating data from VueX, event dispatching, Vue Router.</p>
-        <p><strong>Todo:</strong> Pretty much everything.</p>
+        <p><strong>Demonstrates:</strong> VueJS, promises.</p>
+        <p><strong>Todo:</strong> Merge data from multiple requests in promise chain.</p>
       </router-link>
     </div>
     <div class="row">
