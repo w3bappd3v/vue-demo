@@ -3,17 +3,22 @@
     name: 'Async',
     data () {
       return {
-        info: ''
+        info: []
       }
     },
     methods: {
       fetchInfo () {
-        this.info = "Fetching info..."
-        this.$http.get('https://cors-anywhere.herokuapp.com/http://numbersapi.com/random/year')
-            .then(response => {
-              this.info = response.bodyText;
-            })
-            .catch(error => console.log(error));
+        this.info = ["Fetching info..."];
+        Promise.all ([
+          fetch('https://cors-anywhere.herokuapp.com/http://numbersapi.com/random/year')
+            .then(stream => stream.text())
+            .catch(error => console.error(error)),
+          fetch('https://cors-anywhere.herokuapp.com/http://numbersapi.com/random/year')
+            .then(stream => stream.text())
+            .catch(error => console.error(error))
+        ]).then(results => {
+          this.info = results;
+        });
       }
     }
   }
@@ -36,8 +41,8 @@
 <template>
   <div class="async">
     <button @click="fetchInfo">FETCH INFO</button>
-    <div class="info">
-      <h3>{{ info }}</h3>
+    <div class="info" v-if="info.length">
+      <h3 v-for="item of info" :key="item.key">{{ item }}</h3>
     </div>
   </div>
 </template>

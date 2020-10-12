@@ -50,7 +50,7 @@
     <div class="row">
       <div class="row-item" @click="openTab('https://github.com/w3bappd3v/vue-demo')">
         <h2>Welcome</h2>
-        <h4>This is my Front End engineering demo domain written in VueJS.</h4>
+        <h4>This is my Front End engineering demo domain written in VueJS with Vue Router.</h4>
         <p><strong>Source repository:</strong> https://github.com/w3bappd3v/vue-demo</p>
       </div>
     </div>
@@ -58,16 +58,15 @@
       <router-link to="/listings" tag="div" class="row-item">
         <h3>List Demo</h3>
         <h4>Renders a filterable list of items to which items can be added.</h4>
-        <p><strong>Demonstrates:</strong> Component Architecture, Custom UI, VueX Getter, Props, Vue Router, List Filtering.</p>
-        <p><strong>Todo:</strong>List sorting.</p>
+        <p><strong>Demonstrates:</strong> Component Architecture, Custom UI, VueX Getter, Props, List Filtering.</p>
+        <p><strong>Todo:</strong>List sorting, delete item.</p>
       </router-link>
     </div>
     <div class="row">
       <router-link to="/async" tag="div" class="row-item">
         <h3>Async HTTP</h3>
         <h4>Fetches and renders data from a public API</h4>
-        <p><strong>Demonstrates:</strong> VueJS, promises.</p>
-        <p><strong>Todo:</strong> Merge data from multiple requests in promise chain.</p>
+        <p><strong>Demonstrates:</strong> VueJS, fetch. Promises.all .</p>
       </router-link>
     </div>
     <div class="row">
