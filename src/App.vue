@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
+    <div id="nav" v-if="$route.matched.some(({ name }) => name !== 'Home')">
+      <router-link to="/">&lt; Home</router-link>
     </div>
     <router-view/>
   </div>
@@ -12,7 +12,7 @@
   html{ height: 100vh; overflow: auto;}
 
   body {
-    background: #979797;;
+    background: #e9e9e9;;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -35,15 +35,14 @@
     border-bottom: none;
     min-width: 307px;
     padding: 20px;
-    background: rgb(94,94,94);
-    background: linear-gradient(313deg, rgba(94,94,94,1) 0%, rgba(152,152,152,1) 49%, rgba(255,255,255,1) 100%);
+    background: #fff;
   }
 
   button {
     height: 36px;
     border: none;
     border-radius: 6px;
-    background: #fff;
+    background: #bdbdbd;
     padding: 0 20px;
     outline-color: #fff;
   }

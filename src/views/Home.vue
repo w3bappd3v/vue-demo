@@ -18,10 +18,9 @@
       border-radius: 5px;
       margin: 15px 10px;
       padding: 10px 20px;
-      box-shadow: 1px 1px 12px 2px $box-shadow-color;
       text-align: left;
       border-radius: 3px;
-      background: #f7f7f7;
+      background: #fcfcfc;
       cursor: pointer;
     }
     h2, h3, p{
@@ -37,7 +36,7 @@
       margin: 10px 0;
     }
     .row-item:hover {
-      box-shadow: 1px 1px 10px 2px #6381b9;
+      box-shadow: 0px 1px 8px -2px #6381b9;
     }
     p {
       color: #5c5c5c;
@@ -66,7 +65,7 @@
       <router-link to="/async" tag="div" class="row-item">
         <h3>Async HTTP</h3>
         <h4>Fetches and renders data from a public API</h4>
-        <p><strong>Demonstrates:</strong> VueJS, fetch. Promises.all .</p>
+        <p><strong>Demonstrates:</strong> VueJS, fetch. Promise.all .</p>
       </router-link>
     </div>
     <div class="row">
