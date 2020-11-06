@@ -15,6 +15,7 @@
           <li>{{ listing.neighborhood }}</li>
           <li>${{ listing.price }}</li>
           <li>{{ listing.summary }}</li>
+          <li>{{ listing.id }}</li>
       </ul>
     </div>
 </template>
