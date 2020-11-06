@@ -32,15 +32,12 @@
       listing: Listing
     },
     methods: {
-      addListing (listing) {
-      listing = {
-        id: 7,
-        address: "987 Sunset Blvd",
-        neighborhood: "Hollywood",
-        price: "69,000,000",
-        summary: "3BD, 2BA, 1100SF, CO-OP",
-        image: "listing-1"
-      }
+      addListing () {
+      //add a random listing from existing listings  
+      const listingsList = JSON.parse(JSON.stringify(this.listings));
+      const listing = listingsList[Math.floor(Math.random() * listingsList.length)];
+      //give randomly selected listing a unique id
+      listing.id = listingsList.length + 1;
       store.dispatch('addListing', listing);  
       }
     }

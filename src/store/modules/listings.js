@@ -70,7 +70,6 @@ const mutations = {
 
 const actions = {
   addListing ({commit}, listing) {
-    console.log('add');
     commit('ADD_LISTING', listing);
   }
 }
