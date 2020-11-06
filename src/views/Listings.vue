@@ -17,7 +17,7 @@
             numCount++;
           }
         }
-        if(numCount == strToMatch.length-1){
+        if(numCount == strToMatch.length-1 && strToMatch.length > 1){
           strToMatch = parseInt(strToMatch);
         }
         return this.listings.filter(x => x.address.toLowerCase().includes(strToMatch));
