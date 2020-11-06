@@ -38,6 +38,10 @@
       const listing = listingsList[Math.floor(Math.random() * listingsList.length)];
       //give randomly selected listing a unique id
       listing.id = listingsList.length + 1;
+      //give new listing a unique addres number
+      const addressNumber = Math.floor(Math.random() * 99) + 75;
+      const streets =['Fourth Ave', 'Oak Street', 'Sixth Ave', 'Main Street'];
+      listing.address = addressNumber + ' ' + streets[Math.floor(Math.random() * streets.length)];
       store.dispatch('addListing', listing);  
       }
     }
