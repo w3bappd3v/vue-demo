@@ -33,22 +33,42 @@
     },
     methods: {
       addListing () {
-      //add a random listing from existing listings  
-      const listingsList = JSON.parse(JSON.stringify(this.listings));
-      const listing = listingsList[Math.floor(Math.random() * listingsList.length)];
-      //give randomly selected listing a unique id
-      listing.id = listingsList.length + 1;
-      //give new listing a unique addres number
-      const addressNumber = Math.floor(Math.random() * 99) + 75;
-      const streets =['Fourth Ave', 'Oak Street', 'Sixth Ave', 'Main Street'];
-      listing.address = addressNumber + ' ' + streets[Math.floor(Math.random() * streets.length)];
-      store.dispatch('addListing', listing);  
+        //add a random listing from existing listings  
+        const listingsList = JSON.parse(JSON.stringify(this.listings));
+        const listing = listingsList[Math.floor(Math.random() * listingsList.length)];
+
+        //give randomly selected listing a unique id
+        listing.id = listingsList.length + 1;
+
+        //give new listing a unique addres number
+        const addressNumber = Math.floor(Math.random() * 99) + 75;
+        const streets =['Cherry Lane', 'Oak Street', 'Sixth Ave', 'Main Street'];
+        listing.address = addressNumber + ' ' + streets[Math.floor(Math.random() * streets.length)];
+
+        store.dispatch('addListing', listing);  
+      },
+      removeListing (listing) {
+        store.dispatch('removeListing', listing); 
       }
     }
   }
 </script>
 
+<template>
+  <div class="container">
+    <h1>Listings</h1>
+    <button @click="addListing()">ADD ITEM</button>
+    <input type="text" v-model="searchStr" placeholder="Enter Address" />
+    <div class="listings">
+      <listing v-for="listing in filteredListings" :listing="listing" :key="listing.id" v-on:remove-listing="removeListing(listing.id)"></listing>
+    </div>
+  </div>
+</template>
+
 <style scoped lang="scss">
+  h1 {
+    margin-top: 5px;
+  }
   input {
     border-radius: 3px;
     border: 1px solid #d4d4d4;
@@ -86,17 +106,4 @@
       margin-bottom: 10px;
     }
   }
-
-
 </style>
-
-<template>
-  <div class="container">
-    <h1>Listings</h1>
-    <button @click="addListing({})">ADD ITEM</button>
-    <input type="text" v-model="searchStr" placeholder="Enter Address" />
-    <div class="listings">
-      <listing v-for="listing in filteredListings" :listing="listing" :key="listing.id"></listing>
-    </div>
-  </div>
-</template>

@@ -65,12 +65,19 @@ const getters = {
 const mutations = {
   'ADD_LISTING'(state, listing) {
     state.listings.unshift(listing);
+  },
+  'REMOVE_LISTING'(state, id) {
+    console.log(id);
+    state.listings = state.listings.filter(listing => listing.id !== id);
   }
 }
 
 const actions = {
   addListing ({commit}, listing) {
     commit('ADD_LISTING', listing);
+  },
+  removeListing ({commit}, id) {
+    commit('REMOVE_LISTING', id);
   }
 }
 

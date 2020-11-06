@@ -24,6 +24,15 @@
   }
 </script>
 
+<template>
+  <div class="async">
+    <button @click="fetchInfo">FETCH INFO</button>
+    <div class="info" v-if="info.length">
+      <h3 v-for="item of info" :key="item.key">{{ item }}</h3>
+    </div>
+  </div>
+</template>
+
 <style scoped lang="scss">
   h3 {
     color: #1f4f8f;
@@ -36,13 +45,7 @@
     padding: 10px;
     margin: 10px 50px;
   }
+  button {
+    margin-top: 10px;
+  }
 </style>
-
-<template>
-  <div class="async">
-    <button @click="fetchInfo">FETCH INFO</button>
-    <div class="info" v-if="info.length">
-      <h3 v-for="item of info" :key="item.key">{{ item }}</h3>
-    </div>
-  </div>
-</template>

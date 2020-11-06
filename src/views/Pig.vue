@@ -16,16 +16,6 @@
   }
 </script>
 
-<style scoped>
-  .pig-game {
-      border: 1px solid #7c7c7c;
-      border-radius: 5px;
-      background: #acacac;
-      padding: 10px;
-      margin-top: 10px;
-  }
-</style>
-
 <template>
   <div class="pig-game">
     <h3>Pig Component</h3>
@@ -34,3 +24,13 @@
     <button @click="updateScore(game.roundScore)">INCREMEMT</button>
   </div>
 </template>
+
+<style scoped lang="scss">
+  .pig-game {
+      border: 1px solid #7c7c7c;
+      border-radius: 5px;
+      background: #acacac;
+      padding: 10px;
+      margin-top: 10px;
+  }
+</style>
