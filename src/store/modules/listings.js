@@ -64,7 +64,7 @@ const getters = {
 
 const mutations = {
   'ADD_LISTING'(state, listing) {
-    state.listings.push(listing);
+    state.listings.unshift(listing);
   }
 }
 
