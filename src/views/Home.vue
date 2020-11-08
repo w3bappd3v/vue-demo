@@ -22,7 +22,7 @@
       <router-link to="/listings" tag="div" class="row-item">
         <h3>List Demo</h3>
         <h4>Renders a filterable list of items to which items can be added.</h4>
-        <p><strong>Demonstrates:</strong> Component Architecture, Custom UI, VueX Getter/Mutators, Props, List Filtering</p>
+        <p><strong>Demonstrates:</strong> Component Architecture, Custom UI, Custom Events, VueX Getter/Mutators, Props, List Filtering</p>
         <p><strong>Todo:</strong> List sorting</p>
       </router-link>
     </div> 
@@ -30,7 +30,7 @@
       <router-link to="/async" tag="div" class="row-item">
         <h3>Async HTTP</h3>
         <h4>Fetches and renders data from a public API</h4>
-        <p><strong>Demonstrates:</strong> VueJS, fetch, Promise.all</p>
+        <p><strong>Demonstrates:</strong> Fetch, Promise.all</p>
       </router-link>
     </div>
     <div class="row">

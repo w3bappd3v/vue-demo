@@ -35,24 +35,46 @@
       addListing () {
 
         let listing = {};
-        const listingsList = JSON.parse(JSON.stringify(this.listings));
+        let listingsList = [];
         const listingImgs = ['listing-1', 'listing-2', 'listing-3']
 
-        if (listingsList.length) {
+        if (listingsList.length > 3) {
+          //use existing listings
+          listingsList = JSON.parse(JSON.stringify(this.listings));
           //get a random listing from existing listings  
           listing = listingsList[Math.floor(Math.random() * listingsList.length)];
           //set random image
           listing.image = listingImgs[Math.floor(Math.random() * 3)];
         } else {
           //no listings so need to make one
-          listing = {
-            id: 1,
-            address: "123 First Street",
-            neighborhood: "Beverly Hills",
-            price: "2,000,000",
-            summary: "2BD, 2BA, 1200SF, CONDO",
-            image: "listing-1"
-          }
+          listingsList = [
+            {
+              id: 1,
+              address: "123 First Street",
+              neighborhood: "Beverly Hills",
+              price: "2,000,000",
+              summary: "2BD, 2BA, 1200SF, CONDO",
+              image: "listing-1"
+            },
+            {
+              id: 2,
+              address: "321 2nd Ave",
+              neighborhood: "Harlem",
+              price: "100,000",
+              summary: "2BD, 2BA, 900SF, SINGLE-FAMILY",
+              image: "listing-2"
+            },
+            {
+              id: 3,
+              address: "456 Third Street",
+              neighborhood: "Withering Heights",
+              price: "100,000,000",
+              summary: "3BD, 2BA, 1100SF, CO-OP",
+              image: "listing-3"
+            }
+          ];
+          //get a random listing from existing listings  
+          listing = listingsList[Math.floor(Math.random() * listingsList.length)];
         }
 
         //give new listing a unique addres number
@@ -61,7 +83,7 @@
         listing.address = addressNumber + ' ' + streets[Math.floor(Math.random() * streets.length)];
 
         //give listing a unique as needed here for demo purposes id
-        listing.id = addressNumber + [Math.floor(Math.random() * 99)];
+        listing.id = Date.now() + [Math.floor(Math.random() * 99)];
 
         store.dispatch('addListing', listing);  
       },
