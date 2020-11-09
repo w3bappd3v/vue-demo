@@ -34,7 +34,7 @@
     methods: {
       addListing () {
 
-        //a bit of playing around with randomness to generate new list items  
+        //a bit of fun playing around with randomness to generate new list items  
         let listing = {};
         let listingsList = [];
         const listingImgs = ['listing-1', 'listing-2', 'listing-3']
