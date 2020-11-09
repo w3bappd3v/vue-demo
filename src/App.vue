@@ -12,7 +12,7 @@
   html{ height: 100vh; overflow: auto;}
 
   body {
-    background: #6b84dd;;
+    background: #776959;;
     height: 100vh;
     margin: 0;
     padding: 0;

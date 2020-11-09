@@ -34,10 +34,12 @@
     methods: {
       addListing () {
 
+        //a bit of playing around with randomness to generate new list items  
         let listing = {};
         let listingsList = [];
         const listingImgs = ['listing-1', 'listing-2', 'listing-3']
 
+        //get a random listing from existing list unless list is too small to give enough variance
         if (listingsList.length > 3) {
           //use existing listings
           listingsList = JSON.parse(JSON.stringify(this.listings));
@@ -46,7 +48,7 @@
           //set random image
           listing.image = listingImgs[Math.floor(Math.random() * 3)];
         } else {
-          //no listings so need to make one
+          //use a minimum pool to generate a new unique listing 
           listingsList = [
             {
               id: 1,
